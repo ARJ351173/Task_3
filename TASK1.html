@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage using HTML and CSS">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Tiny5, Arial, sans-serif;
+            color: #333;
+            background-color: #F96167;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #F96167, #8f60bfdb);
+            color: #F9E795;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #F96167, #764ba2);
+            color: #F9E795;
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            padding-left: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #bcda14;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .active a {
+            font-weight: bold;
+            color: #bcda14;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2rem;
+            min-height: 80vh;
+            background-color: #8AAAE5;
+        }
+
+        section {
+            margin: 1rem 0;
+            background: #6f6c6143;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #FCF6F5;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        form input, form textarea, form button {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ff0000;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        form input::placeholder, form textarea::placeholder {
+            color: #999;
+        }
+
+        form button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #5661b3;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .resubmit-button {
+            display: none;
+            margin: 1rem auto;
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        .resubmit-button:hover {
+            background: #5661b3;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.4em;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            nav li {
+                display: inline;
+                margin: 0 1rem;
+            }
+
+            nav a {
+                color: rgb(226, 10, 10);
+                text-decoration: none;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                min-width: 100%;
+                margin: 1rem 0;
+            }
+
+            form input, form textarea, form button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1em;
+            }
+
+            header {
+                padding: 0.5rem 0;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            section {
+                margin: 0.5rem 0;
+            }
+
+            form input, form textarea, form button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#" style="text-decoration: none; color: white;">Welcome</a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li> <!-- Link to pricing page -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+     <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>This website is currently under development.</p>
+        </section>
+        <section id="about">
+            <h2>Abou Us</h2>
+            <article>
+                <p>This website is being developed by a BCA student under the guidance of Mainflow Service and Technology team.</p>
+            </article>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Web Development: We offer custom website development tailored to your needs.</li>
+                <li>Graphic Design: Our team can create stunning visuals and graphics for your website or brand.</li>
+                <li>Digital Marketing: We provide digital marketing services to help your business grow online.</li>
+                <li>Content Writing: Need compelling content? Our experienced writers can craft engaging content for your website.</li>
+                <li>SEO Optimization: Improve your website's visibility on search engines with our SEO optimization services.</li>
+                <li>E-commerce Solutions: Set up and manage your online store with our e-commerce solutions.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm" action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div class="success-message">
+                <p>Form submitted successfully!</p>
+                <button class="resubmit-button">Send Another Message</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Simple Webpage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            document.getElementById('contactForm').style.display = 'none';
+            document.querySelector('.success-message').style.display = 'block';
+            document.querySelector('.resubmit-button').style.display = 'inline-block';
+        });
+
+        document.querySelector('.resubmit-button').addEventListener('click', function() {
+            document.getElementById('contactForm').style.display = 'flex';
+            document.querySelector('.success-message').style.display = 'none';
+            document.querySelector('.resubmit-button').style.display = 'none';
+            
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>

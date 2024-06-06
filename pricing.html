@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pricing page for Simple Webpage">
+    <title>Pricing</title>
+    <style>
+        body {
+            font-family: Tiny5, Arial, sans-serif;
+            color: #333;
+            background-color: #F96167;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #F96167, #8f60bfdb);
+            color: #F9E795;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #F96167, #764ba2);
+            color: #F9E795;
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            padding-left: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #bcda14;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .active a {
+            font-weight: bold;
+            color: #bcda14;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2rem;
+            min-height: 80vh;
+            background-color: #8AAAE5;
+        }
+
+        section {
+            margin: 1rem 0;
+            background: #6f6c6143;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #FCF6F5;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        form input, form textarea, form button {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ff0000;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        form input::placeholder, form textarea::placeholder {
+            color: #999;
+        }
+
+        form button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #5661b3;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .resubmit-button {
+            display: none;
+            margin: 1rem auto;
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        .resubmit-button:hover {
+            background: #5661b3;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.4em;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            nav li {
+                display: inline;
+                margin: 0 1rem;
+            }
+
+            nav a {
+                color: rgb(226, 10, 10);
+                text-decoration: none;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                min-width: 100%;
+                margin: 1rem 0;
+            }
+
+            form input, form textarea, form button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1em;
+            }
+
+            header {
+                padding: 0.5rem 0;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            section {
+                margin: 0.5rem 0;
+            }
+
+            form input, form textarea, form button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="TASK1.html" style="text-decoration: none; color: white;">Welcome</a></h1>
+        <nav>
+            <ul>
+                <li><a href="TASK1.html">Home</a></li>
+                <li><a href="TASK1.html#about">About</a></li>
+                <li><a href="TASK1.html#services">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="TASK1.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <form action="payment_processing_page.php" method="post">
+                <ul>
+                    <li><label for="webDevelopment">
+                        <input type="radio" id="webDevelopment" name="service" value="Web Development" required>
+                        Web Development: ₹1000
+                    </label></li>
+                    <li><label for="graphicDesign">
+                        <input type="radio" id="graphicDesign" name="service" value="Graphic Design" required>
+                        Graphic Design: ₹500
+                    </label></li>
+                    <li><label for="digitalMarketing">
+                        <input type="radio" id="digitalMarketing" name="service" value="Digital Marketing" required>
+                        Digital Marketing: ₹800
+                    </label></li>
+                    <li><label for="contentWriting">
+                        <input type="radio" id="contentWriting" name="service" value="Content Writing" required>
+                        Content Writing: ₹300
+                    </label></li>
+                    <li><label for="seoOptimization">
+                        <input type="radio" id="seoOptimization" name="service" value="SEO Optimization" required>
+                        SEO Optimization: ₹600
+                    </label></li>
+                    <li><label for="ecommerceSolutions">
+                        <input type="radio" id="ecommerceSolutions" name="service" value="E-commerce Solutions" required>
+                        E-commerce Solutions: ₹1200
+                    </label></li>
+                </ul>
+                <input type="submit" value="Proceed to Payment">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <p>&copy; 2024 Simple Webpage. All rights reserved.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="font-size: 0.8em; color: #F9E795;">By proceeding to payment, you agree to our <a href="#" style="color: #F9E795; text-decoration: underline;">Terms and Conditions</a>.</p>
+                <p style="font-size: 0.8em; color: #F9E795;">Please note that prices are subject to change without prior notice. Also the price listed is per day</p>
+            </div>
+        </footer>
+    
+    </body>
+    </html>
+    
