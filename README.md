@@ -1,7 +1,3 @@
-Certainly! To enhance the readability and navigability of your README file, you can include a table of contents. Here’s an updated version of your README file with a table of contents added:
-
----
-
 # Simple Webpage Project
 
 This repository contains a simple webpage developed using HTML, CSS, and JavaScript. It showcases various sections such as Home, About, Services, Pricing, and Contact.
