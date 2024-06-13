@@ -263,23 +263,45 @@
     <footer>
         <p>&copy; 2024 Simple Webpage. All rights reserved.</p>
     </footer>
-
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            
-            document.getElementById('contactForm').style.display = 'none';
-            document.querySelector('.success-message').style.display = 'block';
-            document.querySelector('.resubmit-button').style.display = 'inline-block';
+            event.preventDefault(); // Prevent the default form submission
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            const sanitize = (str) => {
+                const temp = document.createElement('div');
+                temp.textContent = str;
+                return temp.innerHTML;
+            };
+    
+            const sanitized_name = sanitize(name);
+            const sanitized_email = sanitize(email);
+            const sanitized_message = sanitize(message);
+    
+            console.log(`Sanitized Name: ${sanitized_name}`);
+            console.log(`Sanitized Email: ${sanitized_email}`);
+            console.log(`Sanitized Message: ${sanitized_message}`);
+    
+            document.getElementById('contactForm').style.display = 'none'; // Hide the form
+            document.querySelector('.success-message').style.display = 'block'; // Show success message
+            document.querySelector('.resubmit-button').style.display = 'inline-block'; // Show resubmit button
+    
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
         });
-
+    
         document.querySelector('.resubmit-button').addEventListener('click', function() {
-            document.getElementById('contactForm').style.display = 'flex';
-            document.querySelector('.success-message').style.display = 'none';
-            document.querySelector('.resubmit-button').style.display = 'none';
-            
+            document.getElementById('contactForm').style.display = 'flex'; // Show the form
+            document.querySelector('.success-message').style.display = 'none'; // Hide success message
+            document.querySelector('.resubmit-button').style.display = 'none'; // Hide resubmit button
+    
             document.getElementById('contactForm').reset();
         });
     </script>
+    
 </body>
 </html>
