@@ -50,7 +50,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## Acknowledgments
 
 - Thanks to Mainflow Service and Technology team for guidance and support during the development of this project.
-
----
-
-This table of contents provides quick links to each section of the README, making it easier for users and contributors to navigate and find relevant information about your project. Adjust the content as needed to fit your specific project details and preferences.
